@@ -6,7 +6,7 @@ export function productPost(formData) {
     async function a(dispatch) {
       console.log(formData, "form en el action despues del return");
       const post = await axios
-        .post("http://localhost:3001/paints/createProducts", formData)
+        .post("https://arterest-ecommerce.herokuapp.com/paints/createProducts", formData)
         .then((response) => response.data)
         .catch();
       return dispatch({ type: "POST_ACTIVITY", payload: post });
